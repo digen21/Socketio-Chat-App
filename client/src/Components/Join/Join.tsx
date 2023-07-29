@@ -10,7 +10,7 @@ function Join() {
     <>
       <div className="lg:flex">
         <div className="lg:w-1/2 ">
-          <div className="py-12  lg:bg-white xs:shadow-xl md:shadow-none border flex justify-center lg:justify-start lg:px-12 ">
+          <div className="py-12 lg:bg-white xs:shadow-xl md:shadow-none border flex justify-center lg:justify-start lg:px-12 ">
             <div className="cursor-pointer flex items-center">
               <div>
                 <svg
@@ -48,7 +48,7 @@ function Join() {
           <div className=" mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-3xl">
             <h3
               className="text-start text-4xl text-indigo-600 font-display font-semibold lg:text-left xl:text-5xl
-                    xl:text-bold"
+                    xl:text-bold select-none"
             >
               Start <br /> Gossips
             </h3>
@@ -72,12 +72,12 @@ function Join() {
                       Room Name
                     </div>
                     <div>
-                      <a
+                      {/* <a
                         className="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
                                         cursor-pointer"
                       >
                         Forgot Password?
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                   <input
@@ -100,7 +100,7 @@ function Join() {
                                 font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
                                 shadow-lg flex items-center group hover:scale-105 duration-200 justify-center gap-2"
                     >
-                      Log In
+                      Join Room
                       <SendHorizonal
                         height={18}
                         className="group-hover:translate-x-1 duration-200"
@@ -110,15 +110,15 @@ function Join() {
                 </div>
               </form>
               <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
-                Don't have an account ?{" "}
+                {/* Don't have an account ?{" "}
                 <a className="cursor-pointer text-indigo-600 hover:text-indigo-800 underline">
                   Sign up
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
         </div>
-        <div className="hidden lg:flex items-center justify-center bg-indigo-100 flex-1 h-screen">
+        <div className="hidden lg:flex items-center justify-center bg-indigo-200 flex-1 h-screen">
           <div className="max-w-lg transform duration-200 hover:scale-110 cursor-pointer">
             <img className="h-full" src="./chat2.png" alt="" />
           </div>
