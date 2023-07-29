@@ -8,7 +8,7 @@ function InputBox({ message, setMessage, sendMessage }: any) {
   return (
     <div className="flex items-center gap-2 p-3">
       <div className="relative w-full">
-        <form className="flex flex-row relative">
+        <form className="flex flex-row absolute bottom-0">
           <span className="absolute top-2  bottom-0 cursor-pointer rounded rounded-r-none border-0 px-3 font-bold text-grey-100">
             <Laugh className="text-gray-400 h-5 w-5 mt-1" />
           </span>

@@ -18,38 +18,65 @@ function ChatBody({ messages: { text, user, sentAt, prompt }, name }: Props) {
   if (user === trimmedName) {
     isSentByCurrentUser = true;
   }
-
-  return (
-    <>
-      <div className=" xs:px-6 md:px-10 py-1">
-        <div className="m-1">
-          <span>{prompt}</span>
+  return isSentByCurrentUser ? (
+    <div className="px-6 py-1">
+      <div className="m-1">
+        <span>{prompt}</span>
+      </div>
+      <div
+        className={`py-2 flex flex-row w-full  overflow-auto ${
+          isSentByCurrentUser ? "justify-end" : "justify-start"
+        }`}
+      >
+        <div className={`${isSentByCurrentUser ? "order-2" : "order-1"}`}>
+          <img src="./gamer.png" alt="" className="h-6 w-6" />
         </div>
         <div
-          className={`py-2 flex flex-row w-full ${
-            isSentByCurrentUser ? "justify-end" : "justify-start"
+          className={`px-2 w-fit md:py-3 xs:py-1 flex flex-col bg-indigo-500 text-white ${
+            isSentByCurrentUser
+              ? "order-1 mr-2  rounded-tl-2xl rounded-b-2xl rounded-tr-1"
+              : "order-2 ml-2  rounded-tl-1 rounded-b-2xl rounded-tr-2xl"
           }`}
         >
-          <div className={`${isSentByCurrentUser ? "order-2" : "order-1"}`}>
-            <img src="./gamer.png" alt="" className="h-6 w-6" />
-          </div>
-          <div
-            className={`px-2 w-fit md:py-3 xs:py-1 flex flex-col bg-indigo-500 text-white ${
-              isSentByCurrentUser
-                ? "order-1 mr-2  rounded-tl-2xl rounded-b-2xl rounded-tr-1"
-                : "order-2 ml-2  rounded-tl-1 rounded-b-2xl rounded-tr-2xl"
-            }`}
-          >
-            <span className="xs:text-[8px] md:text-[8px] text-gray-200">
-              {name}&nbsp;-&nbsp;
-              {sentAt}
-            </span>
-            <span className="md:text-[15px] xs:text-[10px]">{text}</span>
-          </div>
+          <span className="xs:text-[8px] md:text-[8px] text-gray-200">
+            {name}&nbsp;-&nbsp;
+            {sentAt}
+          </span>
+          <span className="md:text-[15px] xs:text-[10px]">{text}</span>
         </div>
       </div>
-    </>
+    </div>
+  ) : (
+    <div className="px-6 py-1 overflow-auto">
+      <div className="m-1">
+        <span>{prompt}</span>
+      </div>
+      <div
+        className={`py-2 flex flex-row w-full  overflow-auto ${
+          isSentByCurrentUser ? "justify-end" : "justify-start"
+        }`}
+      >
+        <div className={`${isSentByCurrentUser ? "order-2" : "order-1"}`}>
+          <img src="./gamer.png" alt="" className="h-6 w-6" />
+        </div>
+        <div
+          className={`px-2 w-fit md:py-3 xs:py-1 flex flex-col bg-indigo-500 text-white ${
+            isSentByCurrentUser
+              ? "order-1 mr-2  rounded-tl-2xl rounded-b-2xl rounded-tr-1"
+              : "order-2 ml-2  rounded-tl-1 rounded-b-2xl rounded-tr-2xl"
+          }`}
+        >
+          <span className="xs:text-[8px] md:text-[8px] text-gray-200">
+            {user}&nbsp;-&nbsp;
+            {sentAt}
+          </span>
+          <span className="md:text-[15px] xs:text-[10px]">{text}</span>
+        </div>
+      </div>
+    </div>
   );
+
+  //return {
 }
 
 export default ChatBody;
