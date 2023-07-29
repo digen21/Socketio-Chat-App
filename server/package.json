@@ -25,7 +25,9 @@
   "homepage": "https://github.com/digen21/Socketio-Chat-App#readme",
   "devDependencies": {
     "@types/cors": "^2.8.13",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.17",
+    "@types/moment": "^2.13.0",
     "@types/typescript": "^2.0.0",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
@@ -33,6 +35,9 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "socket.io": "^4.7.1"
   }
 }

@@ -6,3 +6,30 @@
 * {
     font-family: "Quicksand", sans-serif
 }
+
+
+.container::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+::-webkit-scrollbar {
+    display: flex;
+}
+
+@layer utilities {
+    .scrollbar-hide::-webkit-scrollbar {
+        width: 1rem;
+        background-color: red;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar-thumb {
+        background-color: red;
+        border-radius: 0.2rem;
+    }
+}
