@@ -18,7 +18,7 @@ function Chat() {
   const date = Date.now();
   const sentAt = moment(date).format("hh:mm A");
 
-  const ENDPOINT = "localhost:5000";
+  const ENDPOINT = "https://gossip-react-chat-app.onrender.com";
 
   useEffect(() => {
     const { room, name } = queryString.parse(location?.search);
